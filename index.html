@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Simple JS API Front End</h2>
+
+<p id="demo">
+This app makes a request to an azure function that queries for gas prices in Houston, when the Call API Button is clicked.
+<br>
+Once the result is returned this page is updated to display the HTML that the API responded with.
+</p>
+
+<!--Setup Date Input Fields-->
+<label for="start">Start Date:</label>
+
+<input type="date" id="start" name="trip-start"
+       value="2018-07-22"
+       min="2018-01-01" max="2018-12-31"
+       onchange="dateChange(event)">
+
+
+
+
+<br>
+<br>
+<label for="end">End Date:</label>
+<input type="date" id="end" name="trip-end"
+        value="2018-07-22"
+        min="2018-01-01" max="2018-12-31"
+        onchange="dateChange(event)">
+       
+<br>
+<br>
+
+
+<!----Define a button linked to a function-->
+<button type="button" onclick="getGasPrices()">Call API</button>
+<button type="button" onclick="clearResult()">Clear Results</button>
+
+<h3>Results</h3>
+
+<p id="results">Results should show here</p>
+<script src="index.js"></script>
+
+</body>
+</html>
